@@ -7,6 +7,7 @@ require(pacman)
 ## llamar y/o instalar librerias
 p_load(tidyverse,rio,skimr,
        sf, ## datos espaciales
+       ggmap,
        leaflet, ## visualizaciones
        tmaptools, ## geocodificar
        ggsn, ## map scale bar 
@@ -33,6 +34,8 @@ leaflet() %>% addTiles() %>% addCircles(data=cbd)
 available_features() %>% head(20)
 
 available_tags("amenity") %>% head(20)
+
+## Llave izquierda, derecha values en open street map - para hacer el query
 
 ### **4.4. Descargar features**
   
